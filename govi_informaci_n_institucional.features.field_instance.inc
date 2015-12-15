@@ -10,14 +10,21 @@
 function govi_informaci_n_institucional_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-informacion_institucional-body'.
-  $field_instances['node-informacion_institucional-body'] = array(
-    'bundle' => 'informacion_institucional',
+  // Exported field_instance: 'node-organizacion-body'.
+  $field_instances['node-organizacion-body'] = array(
+    'bundle' => 'organizacion',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'full' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
@@ -36,15 +43,14 @@ function govi_informaci_n_institucional_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'body',
-    'label' => 'Descripción',
-    'required' => 0,
+    'label' => 'Body',
+    'required' => FALSE,
     'settings' => array(
-      'display_summary' => 1,
+      'display_summary' => TRUE,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'rows' => 20,
@@ -55,9 +61,9 @@ function govi_informaci_n_institucional_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-informacion_institucional-field_adjunto'.
-  $field_instances['node-informacion_institucional-field_adjunto'] = array(
-    'bundle' => 'informacion_institucional',
+  // Exported field_instance: 'node-organizacion-field_organizacion_archivo'.
+  $field_instances['node-organizacion-field_organizacion_archivo'] = array(
+    'bundle' => 'organizacion',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -68,21 +74,22 @@ function govi_informaci_n_institucional_field_default_field_instances() {
         'type' => 'file_default',
         'weight' => 2,
       ),
-      'teaser' => array(
+      'full' => array(
         'label' => 'above',
+        'module' => 'file',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'file_default',
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_adjunto',
-    'label' => 'adjunto',
+    'field_name' => 'field_organizacion_archivo',
+    'label' => 'Archivo',
     'required' => 0,
     'settings' => array(
-      'description_field' => 0,
-      'file_directory' => '',
-      'file_extensions' => 'txt pdf png gif jpg jpeg doc ppt pps xls',
+      'description_field' => 1,
+      'file_directory' => 'institucional',
+      'file_extensions' => 'pdf',
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
@@ -97,9 +104,9 @@ function govi_informaci_n_institucional_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-informacion_institucional-field_imagen'.
-  $field_instances['node-informacion_institucional-field_imagen'] = array(
-    'bundle' => 'informacion_institucional',
+  // Exported field_instance: 'node-organizacion-field_organizacion_imagen'.
+  $field_instances['node-organizacion-field_organizacion_imagen'] = array(
+    'bundle' => 'organizacion',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -113,26 +120,30 @@ function govi_informaci_n_institucional_field_default_field_instances() {
         'type' => 'image',
         'weight' => 1,
       ),
-      'teaser' => array(
+      'full' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_imagen',
-    'label' => 'imagen',
+    'field_name' => 'field_organizacion_imagen',
+    'label' => 'Imagen',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
-      'file_directory' => '',
+      'file_directory' => 'institucional',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '2 MG',
-      'max_resolution' => '900x600',
+      'max_filesize' => '',
+      'max_resolution' => '320x240',
       'min_resolution' => '',
-      'title_field' => 0,
+      'title_field' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -147,144 +158,11 @@ function govi_informaci_n_institucional_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance:
-  // 'node-informacion_institucional-field_orden_de_visualizaci_n_'.
-  $field_instances['node-informacion_institucional-field_orden_de_visualizaci_n_'] = array(
-    'bundle' => 'informacion_institucional',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => '',
-        ),
-        'type' => 'number_integer',
-        'weight' => 5,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_orden_de_visualizaci_n_',
-    'label' => 'orden de visualización ',
-    'required' => 0,
-    'settings' => array(
-      'max' => 100,
-      'min' => 0,
-      'prefix' => '',
-      'suffix' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 1,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'node-informacion_institucional-field_palabras_clave'.
-  $field_instances['node-informacion_institucional-field_palabras_clave'] = array(
-    'bundle' => 'informacion_institucional',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 4,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_palabras_clave',
-    'label' => 'palabras clave',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
-      'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
-      ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 0,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'node-informacion_institucional-field_tipo_de_contenido'.
-  $field_instances['node-informacion_institucional-field_tipo_de_contenido'] = array(
-    'bundle' => 'informacion_institucional',
-    'default_value' => array(
-      0 => array(
-        'tid' => 4,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 3,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_tipo_de_contenido',
-    'label' => 'tipo de contenido',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => -1,
-    ),
-  );
-
   // Translatables
   // Included for use with string extractors like potx.
-  t('Descripción');
-  t('adjunto');
-  t('imagen');
-  t('orden de visualización ');
-  t('palabras clave');
-  t('tipo de contenido');
+  t('Archivo');
+  t('Body');
+  t('Imagen');
 
   return $field_instances;
 }

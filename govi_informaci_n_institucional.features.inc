@@ -16,12 +16,12 @@ function govi_informaci_n_institucional_views_api($module = NULL, $api = NULL) {
  */
 function govi_informaci_n_institucional_node_info() {
   $items = array(
-    'informacion_institucional' => array(
-      'name' => t('información institucional'),
+    'organizacion' => array(
+      'name' => t('Organización'),
       'base' => 'node_content',
-      'description' => t(' información institucional de la Entidad como son: directorio de funcionarios, información institucional, normatividad y presupuesto.'),
+      'description' => t('Utilice este tipo de contenido para gestionar información relacionada con la Entidad, ej: misión, visión, objetivos, funciones y organigrama'),
       'has_title' => '1',
-      'title_label' => t('Titulo'),
+      'title_label' => t('Title'),
       'help' => '',
     ),
   );
