@@ -19,7 +19,8 @@ function govi_informaci_n_institucional_context_default_contexts() {
   $context->conditions = array(
     'path' => array(
       'values' => array(
-        'organizacion' => 'organizacion',
+        'transparencia/organizacion' => 'transparencia/organizacion',
+        'transparencia/organizacion/*' => 'transparencia/organizacion/*',
       ),
     ),
   );

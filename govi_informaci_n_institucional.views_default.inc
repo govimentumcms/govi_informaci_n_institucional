@@ -58,7 +58,7 @@ function govi_informaci_n_institucional_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'organizacion';
+  $handler->display->display_options['path'] = 'transparencia/organizacion';
   $translatables['organizaci_n'] = array(
     t('Master'),
     t('Organización'),
