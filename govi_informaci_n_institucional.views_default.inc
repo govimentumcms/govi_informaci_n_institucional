@@ -15,7 +15,7 @@ function govi_informaci_n_institucional_views_default_views() {
   $view->description = 'Vista con la información institucional de la entidad como misión, visión, objetivos, funciones, y organigrama.';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Organización';
+  $view->human_name = '3. Estructura orgánica y talento humano';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
